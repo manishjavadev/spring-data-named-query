@@ -20,7 +20,7 @@ import javax.persistence.Table;
 @Table(name = "TBL_ACCOUNT")
 @NamedQueries({
 		@NamedQuery(name = "AccountEntity.getByAccountType", query = "SELECT a FROM AccountEntity a WHERE LOWER(a.accountType) = LOWER(?1)"),
-		@NamedQuery(name = "AccountEntity.getByStartDateBetween", query = "SELECT a FROM AccountEntity a WHERE a.startDate BETWEEN ?1 and ?2)") })
+		@NamedQuery(name = "AccountEntity.getByStartDateBetween", query = "SELECT a FROM AccountEntity a WHERE a.startDate BETWEEN :startDate and :endDate)") })
 public class AccountEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
